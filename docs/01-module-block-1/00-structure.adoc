@@ -1,0 +1,5 @@
+== Dies ist das erste Kapitel
+
+include::01-erstes-unterkapitel.adoc[{include_configuration}]
+include::02-zweites-unterkapitel.adoc[{include_configuration}]
+include::references.adoc[{include_configuration}]

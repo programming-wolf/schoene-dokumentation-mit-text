@@ -1,0 +1,5 @@
+== Viertes Kapitel, das ist sein Titel
+
+include::01-duration-terms.adoc[{include_configuration}]
+include::02-learning-goals.adoc[{include_configuration}]
+include::references.adoc[{include_configuration}]

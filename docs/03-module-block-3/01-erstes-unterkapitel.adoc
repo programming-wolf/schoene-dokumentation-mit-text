@@ -1,0 +1,37 @@
+
+=== Erstes Unterkapitel mit großartiger Tabelle
+
+|===
+| Etwas Text links | Etwas Text auf der anderen Seite
+| Viel längerer Text als vorher | Ganz kurz
+|===
+
+
+Jetzt kommt eine Tabelle mit Headern
+
+[cols="<,^,^"]
+|===
+| Spalte 1 Header | Zentriert die 2. Spalte | Dritte Spalte
+
+| left-aligned
+| zentriert, wie gesagt
+| ebenfalls zentriert
+
+| Hinweis für das, was kommt.
+| Und zwar ein Link
+| link:https://innoq.com[INNOQ Website]
+
+| Español
+| Auch Sonderzeichen klappen
+|
+
+|===
+
+
+[IMPORTANT]
+====
+So sieht was ganz Wichtiges aus.
+Auch über mehrere Zeilen und
+
+mit Abstand geht.
+====
