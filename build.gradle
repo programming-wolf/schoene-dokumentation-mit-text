@@ -53,7 +53,9 @@ tasks.register("html", AsciidoctorTask) {
             'release-version'   : testversion,
             'docFileName'       : docFileName,
             'data-uri'          : true,
-            'allow-uri-read'    : true
+            'allow-uri-read'    : true,
+            'stylesheet'        : '../html-theme/bob-github.css',
+            'stylesheet-dir'    : '../html-theme'
     ]
 }
 
