@@ -1,0 +1,9 @@
+:doctype: book
+:icons: font
+:sectnumlevels: 2
+:imagesdir: images
+:!chapter-signifier:
+
+:include_configuration: tags=**;!*
+:documentation-title: Architekturdokumentation mit asciidoc und Gradle
+

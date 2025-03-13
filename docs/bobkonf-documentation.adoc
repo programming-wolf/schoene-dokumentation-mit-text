@@ -1,0 +1,29 @@
+// handle numerous attributes. Successful include of this file
+// is ABSOLUTELY NECESSARY!!
+include::config/setup.adoc[]
+
+= Schöne Dokumentation nur mit Text: Architekturdokumentation pass:q[<br><br>]mit asciidoctor und pass:q[<br>]Gradle
+:toc-title: Inhaltsverzeichnis
+:toc: left
+
+// define terms for toc, learning-goals
+include::config/i18n-definitions.adoc[{include_configuration}]
+
+<<<
+toc::[]
+
+<<<
+:sectnums:
+include::01-module-block-1/00-structure.adoc[{include_configuration}]
+
+<<<
+include::02-module-block-2/00-structure.adoc[{include_configuration}]
+
+<<<
+include::03-module-block-3/00-structure.adoc[{include_configuration}]
+
+// <<<
+// include::04-module-block-4/00-structure.adoc[{include_configuration}]
+
+<<<
+include::99-references/00-references.adoc[{include_configuration}]

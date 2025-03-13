@@ -1,0 +1,7 @@
+= Schöne Dokumentation – nur mit Text
+
+Übungsrepository für den Workshop "Schöne Dokumentation nur mit Text" auf der Bobconf 2025
+
+
+== Content
+Dieses Repository beinhaltet alles, was für den Workshop notwendig ist.

@@ -1,0 +1,59 @@
+import org.asciidoctor.gradle.jvm.AsciidoctorTask
+import java.text.SimpleDateFormat
+
+
+plugins {
+    id 'application'
+    id 'org.asciidoctor.jvm.convert' version '4.0.4'
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    docFileName = "bobkonf-documentation"
+    testversion = "bobKonferenz 1.0"
+    versionDate = new SimpleDateFormat("yyyyMMdd").format(new Date())
+}
+
+
+application {
+    applicationDefaultJvmArgs = [
+            """--add-opens""", """java.base/sun.nio.ch=ALL-UNNAMED""",
+            """--add-opens""", """java.base/java.io=ALL-UNNAMED""",
+    ]
+}
+
+
+
+
+tasks.register("html", AsciidoctorTask) {
+    jvm {
+        jvmArgs("--add-opens", "java.base/sun.nio.ch=ALL-UNNAMED", "--add-opens", "java.base/java.io=ALL-UNNAMED")
+    }
+
+    sourceDir = new File("docs/")
+    baseDir = new File("docs/")
+    sources {
+        include "${docFileName}.adoc"
+    }
+
+    outputDir = "build/"
+
+    def fileVersion = testversion
+
+    attributes = [
+            'icons'             : 'font',
+            'version-label'     : '',
+            'revnumber'         : fileVersion,
+            'revdate'           : versionDate,
+            'document-version'  : fileVersion + "-" + versionDate,
+            'currentDate'       : versionDate,
+            'release-version'   : testversion,
+            'docFileName'       : docFileName,
+            'data-uri'          : true,
+            'allow-uri-read'    : true
+    ]
+}
+
