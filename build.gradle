@@ -20,6 +20,13 @@ ext {
 }
 
 
+pdfThemes {
+    local 'bobkonf', {
+        themeDir = 'pdf-theme/themes'
+        themeName = 'bobkonf'
+    }
+}
+
 application {
     applicationDefaultJvmArgs = [
             """--add-opens""", """java.base/sun.nio.ch=ALL-UNNAMED""",
@@ -37,7 +44,9 @@ tasks.register("pdf", AsciidoctorPdfTask) {
     }
 
     outputDir = "build/"
-    
+
+    theme = "bobkonf"
+    fontsDirs 'pdf-theme/fonts'
     def fileVersion = testversion
 
     attributes = [
@@ -53,7 +62,6 @@ tasks.register("pdf", AsciidoctorPdfTask) {
             'allow-uri-read'    : true,
     ]
 }
-
 
 tasks.register("html", AsciidoctorTask) {
     jvm {
@@ -78,7 +86,7 @@ tasks.register("html", AsciidoctorTask) {
             'document-version'  : fileVersion + "-" + versionDate,
             'currentDate'       : versionDate,
             'release-version'   : testversion,
-            'docFileName'       : docFileName,
+            'docFileName': docFileName,
             'data-uri'          : true,
             'allow-uri-read'    : true,
             'stylesheet'        : '../html-theme/bob-github.css',
@@ -86,3 +94,9 @@ tasks.register("html", AsciidoctorTask) {
     ]
 }
 
+
+tasks.register('buildDocs') {
+    dependsOn 'pdf', 'html'
+}
+
+defaultTasks 'buildDocs'
