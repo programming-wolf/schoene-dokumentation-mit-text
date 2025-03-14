@@ -1,3 +1,7 @@
 
 === Erstes Unterkapitel von Kapitel 1
 Begriff 1, Begriff 2, Begriff 3
+
+Hier kommt der coole Bob-Header
+
+image:bobkonf_header_2025.png[pdfwidth=50%,align=center,alt="Logo der bobKonf 2025"]
